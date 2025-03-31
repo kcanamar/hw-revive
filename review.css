@@ -1,0 +1,23 @@
+/* 
+    This is where we can write comments
+    in CSS
+*/
+
+/* body is root element with the lowest specificity */
+body {
+    margin: 0;
+    color: blue;
+    background-color: #f1f1f1;
+}
+
+.fancy {
+    color: rgb(55, 155, 45, 0.2);
+}
+
+a {
+    color: hsla(309, 100%, 50%, 0.8);
+}
+
+#even-fancier {
+    color: gold;
+}
