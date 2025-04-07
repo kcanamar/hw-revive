@@ -41,3 +41,4 @@ console.log("This is >>", typeof undefined) // This is random
 
 // Everything in javascript is true, except
 // "", 0, null, undefined, false, NaN - Not a Number
+
