@@ -1,43 +1,43 @@
 
-// // Thinking in Javascript
+// Thinking in Javascript
 
-// // This is a comment, a single line comment
-// /* 
-//  * This is a multiline comment
-//  * here is more of that same comment
-//  * */
+// This is a comment, a single line comment
+/* 
+ * This is a multiline comment
+ * here is more of that same comment
+ * */
 
-// // How to print to the console, the second most important thing to learn in any language.
-// console.log("Im a real boy")
+// How to print to the console, the second most important thing to learn in any language.
+console.log("Im a real boy")
 
-// // example of hoisting in action
-// console.log(thing = "something")
+// example of hoisting in action
+console.log(thing = "something")
 
-// // Variables
-// // Declared, using very specific words. 
+// Variables
+// Declared, using very specific words. 
 
-// // let - a mutable variable, the value can be change. This may be reassigned
+// let - a mutable variable, the value can be change. This may be reassigned
 
-// // = is the assignment operator, this does not represent equality
-// let myName = "Kyle" // String begins with ",',` and contains characters 
+// = is the assignment operator, this does not represent equality
+let myName = "Kyle" // String begins with ",',` and contains characters 
 
-// // const - is an immutable variable, meaning it cannot be reassigned
-// const theSky = "is blue"
+// const - is an immutable variable, meaning it cannot be reassigned
+const theSky = "is blue"
 
-// // var - is mutable, and is contained in the global scope.
-// // It receives the super power of hoisting 
-// var thing = "hoisted"
+// var - is mutable, and is contained in the global scope.
+// It receives the super power of hoisting 
+var thing = "hoisted"
 
 
-// // Primitive values, are the most generic values. Types of data in their simplest form
-// console.log(typeof myName, "<<<<<< This is me checking the variable myName")
-// console.log("This is a >>", typeof 1)
-// console.log("This is a >>", typeof 12.3)
-// console.log("This is a >>", typeof true)
-// console.log("This is a >>", typeof false)
-// console.log("This is >>", typeof null) // This is the developer setting this value explicitly
-// console.log("This is >>", null) // This is the developer setting this value explicitly
-// console.log("This is >>", typeof undefined) // This is random
+// Primitive values, are the most generic values. Types of data in their simplest form
+console.log(typeof myName, "<<<<<< This is me checking the variable myName")
+console.log("This is a >>", typeof 1)
+console.log("This is a >>", typeof 12.3)
+console.log("This is a >>", typeof true)
+console.log("This is a >>", typeof false)
+console.log("This is >>", typeof null) // This is the developer setting this value explicitly
+console.log("This is >>", null) // This is the developer setting this value explicitly
+console.log("This is >>", typeof undefined) // This is random
 
 // Everything in javascript is true, except
 // "", 0, null, undefined, false, NaN - Not a Number
@@ -161,3 +161,47 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(oddSum)
+
+////////////////////////////
+// * Functions
+////////////////////////////
+
+// Functions are like spells. It can be used at any time and does magical things like add numbers, create objects and more.
+
+helloWorld() // invocation, call the function, use the function
+
+// Classic function - Hoisted, generates a prototype (constructor, arguments object)
+// parameters are in the function declaration
+function helloWorld() {
+    console.log("Hello World")
+}
+
+// Anonymous Function - NOT hoisted, generates a prototype
+const helloWorld2 = function() {
+    console.log("Hello World 2")
+    // return "Hello World"
+}
+
+helloWorld2()
+
+// Arrow Functions - NOT hoisted, no prototype
+const helloWorld3 = () => {
+    console.log("Hello World 3")
+}
+
+helloWorld3();
+
+// Immediately Invoked Function Expression - IIFE ("IFFY"), NOT hoisted, no prototype
+(function(){
+    console.log("Hello from the other side")
+})();
+
+// Parameters - are what we call them in the declaration statement
+function something(parameter1, parameter2) {
+    console.log(parameter1, "<< this is number 1")
+    console.log(parameter2, "<< this is number 2")
+}
+
+// They become arguments when invoking the function, or calling the function, or using the function
+something("I'm first", 2) // use a comma to separate params
+something({name:"kyle"}, [2,3,4,5,6])
